@@ -13,6 +13,49 @@
 
 <style>
 
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 2px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  
+}
+
+div.form {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 500px;
+  border: 3px solid #73AD21;
+}
 
 </style>
 
@@ -22,17 +65,113 @@
 
 
 <div style="text-align: center;">
-<b><a href="arxikh.html">ΑΡΧΙΚΗ</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b><a href="project.html">Πρότζεκτ</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b><a href="bio.html">Βιογραφικό</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<b><a href="contact.html" target="_blank">Επικοινωνία</a></b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="menu-toggle grid__col-auto grid--justify-center" title="Home">
+    <span class="screen-reader-text"><a href="index.html" style="text-decoration: none">Home</a></span>
+</button>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="menu-toggle grid__col-auto grid--justify-center" title="Αρχική">
+    <span class="screen-reader-text"><a href="arxikh.html" style="text-decoration: none">Αρχική</a></span>
+</button>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="menu-toggle grid__col-auto grid--justify-center" title="Πρότζεκτ">
+	<span class="screen-reader-text"><a href="project.html" style="text-decoration: none">Πρότζεκτ</a></span>
+</button>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="menu-toggle grid__col-auto grid--justify-center" title="Βιογραφικό">
+	<span class="screen-reader-text"><a href="bio.html" style="text-decoration: none">Βιογραφικό</a></span>
+</button>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<button class="menu-toggle grid__col-auto grid--justify-center" title="Επικοινωνία">
+	<span class="screen-reader-text"><a href="contact.html" style="text-decoration: none">Επικοινωνία</a></span>
+</button>
+
+
 </div>
+
 <hr/>
 
 
- 
-<h1><center><u><font color="#c63d3d">Τρόποι Επικοινωνίας</font></u></center></h1>
 
+
+<h1><center><u><font color="#c63d3d">Τρόποι Επικοινωνίας</font></u></h1><br><br>
+<h2><center><u><font color="#000000">Email</font></u></h2>
+<center><a href="mailto:chrmand@teiemt.gr" style="text-decoration: none"><font color="#000000">Χρήστος Μανδραβέλης</a><br><br>
+<a href="mailto:vakouri@teiemt.gr" style="text-decoration: none"><font color="#000000">Βασίλης Κουρής</a></center>
+
+
+
+
+<form style="width:200px;">
+  <fieldset>
+    <legend>Sign in</legend>
+	<br>
+    User name or Email:<br>
+    <input type="text" placeholder="Your name or email..">
+    <br>
+    Password:<br>
+    <input type="text" placeholder="Your password..">
+    <br>
+  
+ 
+    <input type="submit" onclick="alert('Συνδεθήκατε με επιτυχία!')" value="Υποβολή">
+  </fieldset>
+</form>
+
+
+<div class="form">
+	<div class="container">
+<h3>Sign up</h3>
+
+
+
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+	
+	<label for="email">Email</label>
+    <input type="text" id="email" name="email" placeholder="Your email..">
+	
+	<label for="pass">Password</label>
+    <input type="text" id="pass" name="Password" placeholder="Your password..">
+	
+	<label for="phone">Phone</label>
+    <input type="text" id="phone" name="phone" placeholder="Your phone..">
+	
+	<label for="skypeid">Skype ID</label>
+    <input type="text" id="skypeid" name="skypeid" placeholder="Your Skype ID..">
+	
+    <label for="country">Country</label>
+    <select id="country" name="country">
+	<option value="Greece">Greece</option>
+    <option value="Italy">Italy</option>
+    <option value="Rome">Rome</option>
+    <option value="America">America</option>
+    <option value="Africa">Africa</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+	<input type="submit" onclick="alert('Η δημιουργία του λογαριασμού σας έγινε με επιτυχία!')" value="Submit">
+  
+
+</form>
+</div> 
+  
+  
+ 
 
 
 </body>
